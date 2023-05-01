@@ -1,0 +1,29 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <h2>Booking Details</h2>
+  </div>
+  <div class="card-body">
+    <dl class="row">
+      <dt class="col-sm-3">First name</dt>
+      <dd class="col-sm-9"><%= @booking.first_name %></dd>
+
+      <dt class="col-sm-3">Last name</dt>
+      <dd class="col-sm-9"><%= @booking.last_name %></dd>
+
+      <dt class="col-sm-3">Animal name</dt>
+      <dd class="col-sm-9"><%= @booking.animal_name %></dd>
+
+      <dt class="col-sm-3">Animal type</dt>
+      <dd class="col-sm-9"><%= @booking.animal_type %></dd>
+
+      <dt class="col-sm-3">Hours</dt>
+      <dd class="col-sm-9"><%= @booking.hours %></dd>
+
+      <dt class="col-sm-3">Service date</dt>
+      <dd class="col-sm-9"><%= @booking.service_date %></dd>
+
+      <dt class="col-sm-3">Total Charges</dt>
+      <dd class="col-sm-9">$<%= @booking.charge %></dd>
+    </dl>
+  </div>
+</div>

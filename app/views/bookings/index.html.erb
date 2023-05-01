@@ -1,0 +1,34 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <h2>Bookings List</h2>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Animal Name</th>
+          <th scope="col">Animal Type</th>
+          <th scope="col">Hours</th>
+          <th scope="col">Service Date</th>
+          <th scope="col">Total charges</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @bookings.each do |booking| %>
+          <tr>
+            <td><%= booking.first_name %></td>
+            <td><%= booking.last_name %></td>
+            <td><%= booking.animal_name %></td>
+            <td><%= booking.animal_type %></td>
+            <td><%= booking.hours %></td>
+            <td><%= booking.service_date %></td>
+            <td>$<%= booking.charge %></td>
+            <td><%= link_to "Detail", booking_path(booking) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
